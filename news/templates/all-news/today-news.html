@@ -2,7 +2,7 @@
 {% load bootstrap3 %}
 {% block content %} 
 {{ block.super}}
-
+{% load static %}
 <div class="container">
 
   <!-- Looping through news   -->
@@ -35,6 +35,8 @@
     <h2 class="text-center">There No News Items</h2>
   </div>
   {% endfor %}
-
 </div>
+{% endblock %}
+{% block scripts %} {{block.super}}
+  <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
 {% endblock %}
